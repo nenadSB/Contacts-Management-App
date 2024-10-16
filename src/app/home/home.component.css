@@ -1,0 +1,29 @@
+.home-container {
+  max-width: 800px;  /* Limit the width for better readability */
+  margin: 40px auto; /* Center the container with margin */
+  padding: 30px;
+  background: linear-gradient(135deg, #f0f4f8, #d0e8d0); /* Light gradient background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  text-align: center; /* Center align text */
+}
+
+h1 {
+  color: #4caf50; /* Primary green */
+  margin-bottom: 20px; /* Space below the header */
+  font-size: 3rem; /* Increased font size */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+p {
+  color: #333; /* Dark text */
+  line-height: 1.8; /* Increase line height for readability */
+  font-size: 1.5rem; /* Larger font size for paragraphs */
+  margin: 15px 0; /* Add spacing between paragraphs */
+}
+
+/* Add a hover effect to the container */
+.home-container:hover {
+  transform: scale(1.02); /* Slightly increase the size on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
+}

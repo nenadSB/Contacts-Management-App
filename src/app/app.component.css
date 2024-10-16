@@ -1,0 +1,49 @@
+/* Navigation styles */
+.nav-bar {
+  width: 100%;
+  background-color: #dcedc1; /* Light green background for the navbar */
+  padding: 15px 0; /* Add some padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  display: flex; /* Enable flexbox layout */
+  justify-content: center; /* Center the navbar content */
+}
+
+/* Update navbar link styles */
+.nav-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Make the nav links display in a row */
+  gap: 20px; /* Space between nav items */
+}
+
+.nav-ul a {
+  text-decoration: none;
+  color: #333; /* Dark text for contrast */
+  font-weight: bold;
+  padding: 12px 25px; /* Increased padding for larger clickable area */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add transform transition */
+}
+
+/* Add hover effect for links */
+.nav-ul a:hover {
+  background-color: #4caf50; /* Change to green on hover */
+  color: #ffffff; /* White text on hover */
+  transform: scale(1.05); /* Slight scale up effect */
+}
+
+/* Active link styling */
+.active {
+  background-color: #388e3c; /* Darker green for active link */
+  color: #ffffff; /* White text for active link */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,82 @@
+/* contacts.component.css */
+
+/* Main container */
+div {
+  padding: 20px;
+  background-color: #e8f5e9; /* Light green background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Search input */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #4caf50; /* Darker green border */
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Contacts list */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ffffff; /* White background for each contact */
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+button {
+  background-color: #4caf50; /* Main green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
+
+/* Selected contact details */
+h2 {
+  margin-top: 20px;
+  color: #2e7d32; /* Darker green for headings */
+}
+
+p {
+  margin: 5px 0;
+  color: #333; /* Dark gray for text */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  input[type="text"] {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

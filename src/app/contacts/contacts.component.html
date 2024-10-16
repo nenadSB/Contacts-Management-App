@@ -1,0 +1,55 @@
+<!-- contacts.component.html -->
+<div>
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search contacts..."
+  />
+
+  <!-- Add Contact Button -->
+  <button (click)="showAddContactForm = !showAddContactForm">
+    {{ showAddContactForm ? 'Cancel' : 'Add Contact' }}
+  </button>
+
+  <!-- Add/Edit Contact Form -->
+  <div *ngIf="showAddContactForm">
+    <h3 *ngIf="!isEditing">Add New Contact</h3>
+    <h3 *ngIf="isEditing">Edit Contact</h3>
+    <form (ngSubmit)="saveContact()">
+      <label>
+        First Name:
+        <input type="text" [(ngModel)]="newContact.firstName" name="firstName" required>
+      </label>
+      <br>
+      <label>
+        Last Name:
+        <input type="text" [(ngModel)]="newContact.lastName" name="lastName" required>
+      </label>
+      <br>
+      <label>
+        Phone Number:
+        <input type="text" [(ngModel)]="newContact.phone" name="phone" required>
+      </label>
+      <br>
+      <button type="submit">{{ isEditing ? 'Save Changes' : 'Add Contact' }}</button>
+    </form>
+  </div>
+
+  <!-- Contact List -->
+  <ul>
+    <li *ngFor="let contact of filteredContacts()">
+      {{ contact.firstName }} {{ contact.lastName }}
+      <button (click)="viewContact(contact)">View</button>
+      <button (click)="editContact(contact)">Edit</button>
+      <button (click)="deleteContact(contact)">Delete</button>
+    </li>
+  </ul>
+
+  <!-- Selected Contact Details -->
+  <div *ngIf="selectedContact && !isEditing">
+    <h2>Contact Details</h2>
+    <p>First Name: {{ selectedContact.firstName }}</p>
+    <p>Last Name: {{ selectedContact.lastName }}</p>
+    <p>Phone Number: {{ selectedContact.phone }}</p>
+  </div>
+</div>
